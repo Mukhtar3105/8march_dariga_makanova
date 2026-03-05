@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>8 Марта — Жумабаева Насуха Жолдасбековна — Genesis Auto Kazakhstan</title>
+  <title>8 Марта — Маканова Дарига Мидетовна — Genesis Auto Kazakhstan</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,7 +87,6 @@
       overflow:hidden;
       z-index:1;
 
-      /* reveal */
       opacity:0;
       transform: translateY(16px);
       transition: opacity .55s ease, transform .55s ease;
@@ -130,7 +129,6 @@
       background: linear-gradient(to right, transparent, rgba(181,143,152,.60), transparent);
     }
 
-    /* Text slightly bigger */
     .p{
       font-size: 22px;
       line-height: 1.95;
@@ -159,7 +157,7 @@
       letter-spacing: .01em;
     }
 
-    /* Logo (not fixed) */
+    /* Logo (top, not fixed) */
     .hero-logo{
       width: min(220px, 70vw);
       height:auto;
@@ -172,7 +170,7 @@
       50%{ transform: translateY(-8px); }
     }
 
-    /* Main photo in circle, centered */
+    /* Main photo circle centered */
     .hero-img{
       width: min(280px, 76vw);
       aspect-ratio: 1 / 1;
@@ -397,58 +395,6 @@
       font-family:"Cinzel", serif;
     }
 
-    /* Countdown */
-    .countdown{ margin-top: 18px; text-align:center; }
-    .count-title{
-      text-align:center;
-      font-size: 13px;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      margin: 0 0 10px;
-      color: rgba(12,14,16,.68);
-      font-family:"Cinzel", serif;
-    }
-    .digits{
-      display:flex;
-      justify-content:center;
-      gap: 10px;
-      flex-wrap:wrap;
-    }
-    .unit{ min-width: 90px; text-align:center; }
-    .flip{
-      background: linear-gradient(135deg, rgba(198,161,168,.92), rgba(181,143,152,.92));
-      color:#fff;
-      border-radius: 14px;
-      padding: 12px 10px;
-      font-size: 34px;
-      line-height: 1;
-      box-shadow: 0 14px 26px rgba(198,161,168,.18);
-      font-variant-numeric: tabular-nums;
-      border: 1px solid rgba(255,255,255,.35);
-    }
-    .lab{
-      margin-top: 7px;
-      font-size: 11px;
-      letter-spacing:.16em;
-      text-transform: uppercase;
-      color: rgba(12,14,16,.62);
-      font-family:"Cinzel", serif;
-    }
-
-    .sign{
-      margin-top: 14px;
-      font-size: clamp(28px, 7.2vw, 44px);
-    }
-    .footer-sign{
-      margin-top: 10px;
-      font-size: 14px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: rgba(12,14,16,.62);
-      line-height: 1.7;
-      font-family:"Cinzel", serif;
-    }
-
     /* Floating "up" button */
     .toTop{
       position:fixed;
@@ -468,8 +414,6 @@
 
     @media(max-width:420px){
       .caps{ font-size: 14px; }
-      .unit{ min-width: 78px; }
-      .flip{ font-size: 30px; }
       .btn{ font-size: 12px; padding: 14px 22px; }
       .p{ font-size: 20px; }
     }
@@ -487,19 +431,20 @@
       <div class="card">
         <div class="hero">
 
-          <img class="hero-logo" src="./GEN_Wing_positive(filled)_RGB_low.png" alt="Genesis">
+          <!-- ✅ ВАЖНО: у вас файл называется "GEN_Wing_positive(filled)_RGB_low (1).png" -->
+          <img class="hero-logo" src="./GEN_Wing_positive(filled)_RGB_low (1).png" alt="Genesis">
 
           <p class="caps">Genesis Auto Kazakhstan</p>
           <div class="script hero-title">С 8 Марта</div>
 
           <div class="hero-img">
-            <img src="./main_photo.png" alt="Жумабаева Насуха Жолдасбековна">
+            <img src="./main_photo.png" alt="Маканова Дарига Мидетовна">
           </div>
 
           <div class="divider"></div>
 
-          <p class="caps" style="margin-top:2px;">Жумабаева Насуха Жолдасбековна</p>
-          <p class="small">Юрист</p>
+          <p class="caps" style="margin-top:2px;">Маканова Дарига Мидетовна</p>
+          <p class="small">Директор по развитию (Заместитель Директора)</p>
 
           <div class="btns">
             <a class="btn" href="#congrats">Открыть поздравление</a>
@@ -515,52 +460,51 @@
       </div>
     </section>
 
-    <!-- 2) Поздравление -->
+    <!-- 2) Поздравление + прощание -->
     <section id="congrats">
       <div class="card">
-        <div class="script h-script">💐 Поздравление от коллектива</div>
+        <div class="script h-script">💐 Поздравление и слова благодарности</div>
 
         <div class="flow">
           <p class="p">
-            Насуха Жолдасбековна,<br>
-            примите самые тёплые и искренние поздравления
-            с Международным женским днём — 8 Марта
+            Дарига Мидетовна,<br>
+            примите самые тёплые и искренние поздравления с Международным женским днём — 8 Марта
             от коллектива <b>Genesis Auto Kazakhstan</b>.
           </p>
 
           <p class="p">
-            Вы — наш любимый и многоуважаемый юрист: человек, которому доверяют сложные вопросы,
-            важные решения и спокойствие в самых напряжённых ситуациях.
+            Вы — человек, который оставил сильный след в истории нашего бренда и команды.
+            Благодаря Вашей энергии, системному подходу и лидерству мы прошли важнейшие этапы —
+            от становления до уверенного запуска.
+          </p>
+
+          <div class="subhead">🏗️ Ваш вклад</div>
+
+          <p class="p">
+            Мы искренне благодарим Вас за активное участие в строительстве и запуске дилерского центра в Алматы.
+            Именно такие проекты требуют характера, выдержки и умения вести команду к результату — и Вы это сделали.
           </p>
 
           <p class="p">
-            Ваш профессионализм, точность, принципиальность и умение видеть риски заранее —
-            это настоящая опора для команды. Благодаря Вам многое становится яснее, безопаснее
-            и правильно оформленным до последней детали.
+            Отдельные слова признательности — за вклад в запуск бренда <b>Genesis</b> в Казахстане.
+            Это большой путь, который запоминается не датами, а людьми. И Вы — один из ключевых людей этого пути.
           </p>
 
-          <div class="subhead">⚖️ О Вас</div>
+          <div class="subhead">🌿 Тёплые слова на прощание</div>
 
           <p class="p">
-            В Вас особенно ценится уверенная выдержка: Вы умеете спокойно разложить по полочкам даже то,
-            что другим кажется «невозможным», и найти верное решение без лишних эмоций — по фактам и по сути.
-          </p>
-
-          <p class="p">
-            Вы защищаете интересы компании, бережёте нашу репутацию и помогаете каждому чувствовать,
-            что рядом есть надёжная юридическая поддержка.
-          </p>
-
-          <div class="subhead">🌸 Пожелания</div>
-
-          <p class="p">
-            Пусть в жизни будет больше лёгкости, радостных событий и приятных поводов для улыбки,
-            а в работе — уважение, признание и уверенность, что Ваш труд действительно ценят.
+            Мы знаем, что Ваш <b>последний рабочий день — 10-го числа</b>, и поэтому хотим сказать главное:
+            спасибо за совместную работу, за доверие, за планку качества и за тот темп,
+            который помогал нам становиться сильнее.
           </p>
 
           <p class="p">
-            Желаем крепкого здоровья, гармонии, благополучия и тепла в семье.
-            Пусть каждый день приносит хорошие новости и внутреннее спокойствие.
+            Пусть впереди будет новая глава — яркая, достойная и счастливая.
+            Мы будем искренне рады Вашим успехам и всегда будем помнить Ваш вклад.
+          </p>
+
+          <p class="p">
+            И знайте: <b>мы всегда ждём Вас</b> — и наши двери всегда открыты для Вас.
           </p>
 
           <p class="p">
@@ -577,18 +521,19 @@
         <div class="script h-script">О Вас</div>
 
         <p class="p">
-          Вы — символ порядка и справедливости в наших процессах:
-          там, где требуется точность, ответственность и уверенное слово.
+          Вы умеете собирать людей вокруг результата, видеть цель шире и держать курс даже тогда,
+          когда задач много и сроки жёсткие.
         </p>
         <p class="p">
-          С Вами спокойно — потому что Вы всегда держите рамки, сроки и формулировки под контролем.
+          Ваш стиль управления — про развитие, ответственность и уважение к делу.
+          Это чувствовалось в каждом этапе запуска дилерского центра и бренда.
         </p>
 
         <div class="chips" aria-label="Профиль">
           <div class="chip">Genesis Auto Kazakhstan</div>
-          <div class="chip">Юридическая поддержка</div>
-          <div class="chip">Точность</div>
-          <div class="chip">Надёжность</div>
+          <div class="chip">Развитие</div>
+          <div class="chip">Лидерство</div>
+          <div class="chip">Запуск проектов</div>
         </div>
       </div>
     </section>
@@ -615,22 +560,21 @@
       </div>
     </section>
 
-    <!-- 5) Знак и стихия -->
+    <!-- 5) Ваш знак и стихия -->
     <section id="astro">
       <div class="card">
         <div class="script h-script">Ваш знак и стихия</div>
 
         <div class="chips" style="margin-top:10px;">
-          <div class="chip">♈ Овен</div>
-          <div class="chip">Стихия: Огонь</div>
-          <div class="chip">Планета: Марс</div>
-          <div class="chip">Дата: 6 апреля</div>
+          <div class="chip">♏ Скорпион</div>
+          <div class="chip">Стихия: Вода</div>
+          <div class="chip">Дата: 14 ноября</div>
         </div>
 
         <p class="p" style="margin-top:14px;">
-          Овен — это уверенность, прямота и внутренняя сила.
-          Такие люди держат слово, защищают границы и умеют быть опорой — особенно там,
-          где важны принципы и ответственность.
+          Скорпион — про глубину, характер и внутреннюю силу.
+          Это знак людей, которые умеют доводить начатое до результата, держать позицию
+          и идти вперёд — даже когда путь непростой.
         </p>
       </div>
     </section>
@@ -642,32 +586,30 @@
 
         <div class="grid">
           <div class="mini">
-            <div class="t">Позиция</div>
+            <div class="t">Лидерство</div>
             <div class="v">
-              Вы уверенно отстаиваете интересы компании и не боитесь сложных разговоров —
-              при этом всегда корректно и профессионально.
+              Умение задавать направление, держать фокус и вести команду к результату.
             </div>
           </div>
 
           <div class="mini">
-            <div class="t">Точность</div>
+            <div class="t">Системность</div>
             <div class="v">
-              Формулировки, сроки, риски и детали — всё под контролем.
-              С Вами документы «живут правильно».
+              Выстраивание процессов и контроль деталей — так, чтобы всё работало «как часы».
             </div>
           </div>
 
           <div class="mini">
-            <div class="t">Надёжность</div>
+            <div class="t">Энергия запуска</div>
             <div class="v">
-              На Вас можно положиться: Вы держите процесс и даёте чувство уверенности всей команде.
+              То самое качество, которое превращает планы в реальные, работающие проекты.
             </div>
           </div>
 
           <div class="mini">
-            <div class="t">Тактичность</div>
+            <div class="t">Ответственность</div>
             <div class="v">
-              Вы умеете объяснить сложное простым языком, сохраняя уважение и к людям, и к делу.
+              На Вас можно положиться: Вы держите слово и доводите начатое до финала.
             </div>
           </div>
         </div>
@@ -679,12 +621,12 @@
       <div class="card">
         <div class="script h-script">В Вас особенно ценно</div>
         <div class="tags">
-          <div class="tag">Принципиальность</div>
-          <div class="tag">Профессионализм</div>
-          <div class="tag">Точность</div>
-          <div class="tag">Надёжность</div>
-          <div class="tag">Уверенность</div>
-          <div class="tag">Уважение</div>
+          <div class="tag">Лидерство</div>
+          <div class="tag">Сила характера</div>
+          <div class="tag">Системность</div>
+          <div class="tag">Драйв проектов</div>
+          <div class="tag">Ответственность</div>
+          <div class="tag">Результат</div>
         </div>
       </div>
     </section>
@@ -694,46 +636,11 @@
       <div class="card">
         <div class="script h-script">С теплом и уважением</div>
         <p class="p">
-          Пусть будет больше спокойных дней, приятных событий
-          и поводов для искренней улыбки 💐
+          Пусть впереди будет больше радости, вдохновения и сильных побед —
+          а рядом всегда будут люди, которые ценят Вас по-настоящему 💐
         </p>
 
         <div class="script sign">Коллектив Genesis Auto Kazakhstan</div>
-      </div>
-    </section>
-
-    <!-- 9) Обратный отсчёт до ДР -->
-    <section id="bday">
-      <div class="card">
-        <div class="script h-script">До Вашего дня рождения</div>
-
-        <div class="countdown">
-          <p class="count-title">Осталось:</p>
-          <div class="digits">
-            <div class="unit">
-              <div class="flip" id="bDays">00</div>
-              <div class="lab">дней</div>
-            </div>
-            <div class="unit">
-              <div class="flip" id="bHours">00</div>
-              <div class="lab">часов</div>
-            </div>
-            <div class="unit">
-              <div class="flip" id="bMins">00</div>
-              <div class="lab">минут</div>
-            </div>
-            <div class="unit">
-              <div class="flip" id="bSecs">00</div>
-              <div class="lab">секунд</div>
-            </div>
-          </div>
-
-          <div class="footer-sign" style="margin-top:14px;">
-            И пусть каждый день до него будет светлым 🌸
-          </div>
-        </div>
-
-        <a class="btn" href="#top" style="margin-top:18px;">Наверх</a>
       </div>
     </section>
 
@@ -787,7 +694,6 @@
       const dotsWrap = document.getElementById('gDots');
       const prev = document.getElementById('gPrev');
       const next = document.getElementById('gNext');
-
       let i = 0;
 
       function buildDots(){
@@ -799,7 +705,6 @@
           dotsWrap.appendChild(d);
         });
       }
-
       function render(){
         imgs.forEach((img, idx)=> img.classList.toggle('active', idx===i));
         Array.from(dotsWrap.children).forEach((d, idx)=> d.classList.toggle('on', idx===i));
@@ -831,38 +736,6 @@
       render();
     })();
 
-    // Birthday countdown (every year) — 06 Apr
-    const pad2 = n => String(n).padStart(2,'0');
-
-    function nextBirthday(monthIndex, day){
-      const now = new Date();
-      const y = now.getFullYear();
-      let t = new Date(y, monthIndex, day, 0, 0, 0, 0);
-      if(t <= now) t = new Date(y + 1, monthIndex, day, 0, 0, 0, 0);
-      return t;
-    }
-
-    function tickBirthday(){
-      const target = nextBirthday(3, 6); // Apr=3, day=6
-      const now = new Date();
-      let diff = target - now;
-      if(diff < 0) diff = 0;
-
-      const sec = Math.floor(diff / 1000);
-      const days = Math.floor(sec / 86400);
-      const hours = Math.floor((sec % 86400) / 3600);
-      const mins = Math.floor((sec % 3600) / 60);
-      const secs = sec % 60;
-
-      document.getElementById('bDays').textContent  = pad2(days);
-      document.getElementById('bHours').textContent = pad2(hours);
-      document.getElementById('bMins').textContent  = pad2(mins);
-      document.getElementById('bSecs').textContent  = pad2(secs);
-    }
-
-    tickBirthday();
-    setInterval(tickBirthday, 1000);
-
     // Share / Copy link / Print
     (function actions(){
       const btnShare = document.getElementById('btnShare');
@@ -870,6 +743,7 @@
       const hint = document.getElementById('shareHint');
 
       function toast(){
+        if(!hint) return;
         hint.style.display = 'block';
         clearTimeout(window.__t);
         window.__t = setTimeout(()=> hint.style.display = 'none', 1600);
@@ -890,26 +764,22 @@
         }
       }
 
-      btnShare.addEventListener('click', async ()=>{
-        const data = {
-          title: document.title,
-          text: 'Поздравление с 8 Марта',
-          url: location.href
-        };
-        if(navigator.share){
-          try{ await navigator.share(data); }
-          catch(e){ /* cancelled */ }
-        }else{
-          await copyLink();
-        }
-      });
-
-      btnPrint.addEventListener('click', ()=>{
-        window.print();
-      });
+      if(btnShare){
+        btnShare.addEventListener('click', async ()=>{
+          const data = { title: document.title, text: 'Поздравление', url: location.href };
+          if(navigator.share){
+            try{ await navigator.share(data); } catch(e){}
+          }else{
+            await copyLink();
+          }
+        });
+      }
+      if(btnPrint){
+        btnPrint.addEventListener('click', ()=> window.print());
+      }
     })();
 
-    // Download all images (main + gallery)
+    // Download all images
     (function downloadAll(){
       const btn = document.getElementById('btnDownloadAll');
       if(!btn) return;
