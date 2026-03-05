@@ -330,10 +330,7 @@
     }
 
     /* Text blocks */
-    .flow{
-      text-align:left;
-      margin-top: 10px;
-    }
+    .flow{ text-align:left; margin-top: 10px; }
     .flow p{ margin: 12px 0 0; }
     .subhead{
       margin-top: 18px;
@@ -346,12 +343,7 @@
     }
 
     /* Grid */
-    .grid{
-      display:grid;
-      gap: 12px;
-      margin-top: 14px;
-      text-align:left;
-    }
+    .grid{ display:grid; gap: 12px; margin-top: 14px; text-align:left; }
     .mini{
       background: rgba(255,255,255,.18);
       border: 1px solid rgba(198,161,168,.18);
@@ -395,6 +387,49 @@
       font-family:"Cinzel", serif;
     }
 
+    /* Countdown */
+    .countdown{ margin-top: 14px; text-align:center; }
+    .count-title{
+      text-align:center;
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      color: rgba(12,14,16,.68);
+      font-family:"Cinzel", serif;
+    }
+    .digits{
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .unit{ min-width: 90px; text-align:center; }
+    .flip{
+      background: linear-gradient(135deg, rgba(198,161,168,.92), rgba(181,143,152,.92));
+      color:#fff;
+      border-radius: 14px;
+      padding: 12px 10px;
+      font-size: 34px;
+      line-height: 1;
+      box-shadow: 0 14px 26px rgba(198,161,168,.18);
+      font-variant-numeric: tabular-nums;
+      border: 1px solid rgba(255,255,255,.35);
+    }
+    .lab{
+      margin-top: 7px;
+      font-size: 11px;
+      letter-spacing:.16em;
+      text-transform: uppercase;
+      color: rgba(12,14,16,.62);
+      font-family:"Cinzel", serif;
+    }
+    .bday-msg{
+      display:none;
+      margin-top: 14px;
+      font-size: clamp(34px, 8vw, 56px);
+    }
+
     /* Floating "up" button */
     .toTop{
       position:fixed;
@@ -416,6 +451,8 @@
       .caps{ font-size: 14px; }
       .btn{ font-size: 12px; padding: 14px 22px; }
       .p{ font-size: 20px; }
+      .unit{ min-width: 78px; }
+      .flip{ font-size: 30px; }
     }
   </style>
 </head>
@@ -644,6 +681,44 @@
       </div>
     </section>
 
+    <!-- 9) Обратный отсчёт до ДР -->
+    <section id="bday">
+      <div class="card">
+        <div class="script h-script">До Вашего дня рождения</div>
+
+        <div class="countdown" id="countdownWrap">
+          <p class="count-title">Осталось:</p>
+          <div class="digits">
+            <div class="unit">
+              <div class="flip" id="bDays">00</div>
+              <div class="lab">дней</div>
+            </div>
+            <div class="unit">
+              <div class="flip" id="bHours">00</div>
+              <div class="lab">часов</div>
+            </div>
+            <div class="unit">
+              <div class="flip" id="bMins">00</div>
+              <div class="lab">минут</div>
+            </div>
+            <div class="unit">
+              <div class="flip" id="bSecs">00</div>
+              <div class="lab">секунд</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🎉 появится, когда отсчёт закончится -->
+        <div class="script bday-msg" id="bdayMsg">С Днём рождения! 🎉</div>
+
+        <p class="small" style="margin-top:12px;">
+          Пусть этот день будет тёплым, красивым и наполненным добрыми словами 🌸
+        </p>
+
+        <a class="btn" href="#top" style="margin-top:18px;">Наверх</a>
+      </div>
+    </section>
+
   </main>
 
   <!-- Floating "up" button -->
@@ -809,6 +884,48 @@
         }
       });
     })();
+
+    // ✅ Birthday countdown (every year) — 14 Nov
+    const pad2 = n => String(n).padStart(2,'0');
+
+    function nextBirthday(monthIndex, day){
+      const now = new Date();
+      const y = now.getFullYear();
+      let t = new Date(y, monthIndex, day, 0, 0, 0, 0);
+      if(t <= now) t = new Date(y + 1, monthIndex, day, 0, 0, 0, 0);
+      return t;
+    }
+
+    function tickBirthday(){
+      // November = 10
+      const target = nextBirthday(10, 14);
+      const now = new Date();
+      let diff = target - now;
+
+      const wrap = document.getElementById('countdownWrap');
+      const msg  = document.getElementById('bdayMsg');
+
+      if(diff <= 0){
+        // finished ✅
+        if(wrap) wrap.style.display = 'none';
+        if(msg)  msg.style.display  = 'block';
+        return;
+      }
+
+      const sec = Math.floor(diff / 1000);
+      const days = Math.floor(sec / 86400);
+      const hours = Math.floor((sec % 86400) / 3600);
+      const mins = Math.floor((sec % 3600) / 60);
+      const secs = sec % 60;
+
+      document.getElementById('bDays').textContent  = pad2(days);
+      document.getElementById('bHours').textContent = pad2(hours);
+      document.getElementById('bMins').textContent  = pad2(mins);
+      document.getElementById('bSecs').textContent  = pad2(secs);
+    }
+
+    tickBirthday();
+    setInterval(tickBirthday, 1000);
   </script>
 </body>
 </html>
